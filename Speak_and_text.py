@@ -44,7 +44,8 @@ def speak(string):
     playsound(file)
     os.remove(file)
 
-
+if __name__=='__main__':
+    speak("konuşmaya başla")
 
 # voice = record()
 

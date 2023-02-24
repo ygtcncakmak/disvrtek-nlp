@@ -36,6 +36,7 @@ def sestotext2():
     print(result.text)
 
 
-
+if __name__=='__main__':
+    sestotext2()
 
 

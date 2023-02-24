@@ -74,4 +74,5 @@ def recording():
     print("Ses kaydı dosyası {}'ye kaydedildi.".format(filename))
     print("metin çıktısı bekleniyor.....")
 
-
+if __name__=='__main__':
+    recording()

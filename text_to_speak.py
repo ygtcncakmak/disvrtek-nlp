@@ -37,3 +37,6 @@ metin3 = """ Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Quis
 elementum id enim. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim."""
 
 dizi = [metin1, metin2, metin3]
+
+if __name__=='__main__':
+    konus("deneme metni")
