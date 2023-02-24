@@ -40,6 +40,7 @@ def speak(string):
     tts = gTTS(text=string, lang="tr")
     file = "answer.mp3"
     tts.save(file)
+    print("**************************************************************************")
     print(dizi[random.randint(0, 2)])
     playsound(file)
     os.remove(file)

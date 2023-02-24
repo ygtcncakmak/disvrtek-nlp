@@ -6,7 +6,7 @@ import random
 def konus(metin):
     #pyttsx3.Engine'i referans olarak alır
     engine = pyttsx3.init()
-    
+    print("**************************************************************************")
     print(dizi[random.randint(0, 2)])
     
     
