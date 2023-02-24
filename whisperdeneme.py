@@ -1,9 +1,16 @@
 import whisper
+import dosyaislem
 
 def sestotext():
     
     model = whisper.load_model("base")
     result = model.transcribe("output.mp3")
+    
+    output = open("output.txt", "w")
+    output.write(result["text"])
+    output.close()
+    
+    dosyaislem.dosyayaz(result["text"])
     
     print(result["text"])
 
@@ -26,7 +33,9 @@ def sestotext2():
     # decode the audio
     options = whisper.DecodingOptions()
     result = whisper.decode(model, mel, options)
-
+    
+    dosyaislem.dosyayaz(result.text)
+    
     # print the recognized text
     print(result.text)
 
