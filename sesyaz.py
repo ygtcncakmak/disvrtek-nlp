@@ -3,6 +3,8 @@ from gtts import gTTS
 import speech_recognition as sr
 import os
 import random
+import whisper
+
 
 metin1 = """ Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet et, 
 porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, 
@@ -12,8 +14,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus ni
 metin3 = """ Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in,
 elementum id enim. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim."""
 
-dizi=[metin1,metin2,metin3]
-
+dizi = [metin1, metin2, metin3]
 
 
 r = sr.Recognizer()
@@ -21,6 +22,7 @@ r = sr.Recognizer()
 
 def record(ask=False):
     with sr.Microphone()as source:
+
         if ask:
             print(ask)
         audio = r.listen(source)
@@ -38,15 +40,21 @@ def speak(string):
     tts = gTTS(text=string, lang="tr")
     file = "answer.mp3"
     tts.save(file)
+    print(dizi[random.randint(0, 2)])
     playsound(file)
     os.remove(file)
 
-print(dizi[random.randint(0,2)])
 
-speak("konuşmaya başla")
-voice = record()
-if voice != '':
-    voice = voice.lower()
-    print(voice)
-if "merhaba" in voice:
-    speak("sanada merhaba")
+
+# speak("konuşmaya başla")
+
+
+# voice = record()
+
+
+# if voice != '':
+#     voice = voice.lower()
+#     print(voice)
+
+
+
