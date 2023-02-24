@@ -6,10 +6,6 @@ def sestotext():
     model = whisper.load_model("base")
     result = model.transcribe("output.mp3")
     
-    output = open("output.txt", "w")
-    output.write(result["text"])
-    output.close()
-    
     dosyaislem.dosyayaz(result["text"])
     
     print(result["text"])

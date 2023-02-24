@@ -1,7 +1,9 @@
-import Record
-import whisperdeneme
 import os
 import time
+import Record
+import whisperdeneme
+import Speak_and_text
+
 
 Record.recording()
 time.sleep(4)

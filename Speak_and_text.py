@@ -3,7 +3,7 @@ from gtts import gTTS
 import speech_recognition as sr
 import os
 import random
-import whisper
+
 
 
 metin1 = """ Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet et, 
@@ -44,9 +44,6 @@ def speak(string):
     playsound(file)
     os.remove(file)
 
-
-
-# speak("konuşmaya başla")
 
 
 # voice = record()

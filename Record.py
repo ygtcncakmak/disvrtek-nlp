@@ -1,8 +1,9 @@
 import pyaudio
 import wave
 import numpy as np
-import Speak_and_text
 import time
+import Speak_and_text
+import text_to_speak
 
 
 def recording():
@@ -25,11 +26,11 @@ def recording():
     frames = []
     silent_count = 0 # ardışık sessiz frame sayısı
     
-    time.sleep(2)
+    time.sleep(1)
 
-    Speak_and_text.speak("konuşmaya başla")
+    # Speak_and_text.speak("konuşmaya başla")
     
-    time.sleep(2)
+    text_to_speak.konus("konusmaya basla")
 
     print("Ses kaydı başladı.")
 
@@ -71,3 +72,6 @@ def recording():
     wf.close()
 
     print("Ses kaydı dosyası {}'ye kaydedildi.".format(filename))
+    print("metin çıktısı bekleniyor.....")
+
+
