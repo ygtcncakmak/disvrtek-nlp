@@ -6,6 +6,6 @@ import Speak_and_text
 
 
 Record.recording()
-time.sleep(4)
+time.sleep(3)
 whisperdeneme.sestotext2()
 # os.remove("output.mp3")
